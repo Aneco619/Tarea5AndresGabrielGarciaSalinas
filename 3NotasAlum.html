@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Notas Alumno</title>
+</head>
+
+<body>
+    <h1>Calificaciones</h1>
+
+</body>
+<script>
+    var nota1 = parseFloat(prompt("Ingrese la primera calificación"));
+    var nota2 = parseFloat(prompt("Ingrese la segunda calificación"));
+    var nota3 = parseFloat(prompt("Ingrese la tercera calificación"));
+
+    var promedio = ((nota1 + nota2 + nota3) / 3);
+    alert(+promedio + " es el promedio");
+    if (promedio >= 5) {
+        alert("Esta aprobado")
+    }
+    else{
+        alert("Esta suspendido")
+    }
+</script>
+
+</html>
