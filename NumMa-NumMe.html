@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MayorMenor</title>
+
+    <style>
+        .container {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+
+        body {
+            background-color: #8eb9d6;
+            margin: 0;
+        }
+
+        h1 {
+            margin: 30px;
+            font-family: "Lobster", cursive;
+            text-shadow: 5px 0 #232931;
+            font-size: 4.5rem;
+            color: #c1cc4e;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+		<h1>Números mayor o menor</h1>
+
+</body>
+
+<script>
+    // 
+
+    var num1 = parseInt(prompt("Introduza el primer numero"));
+    var num2 = parseInt(prompt("Introduzca un segundo numero"))
+    MayorMenor();
+
+    function MayorMenor() {
+        if(num1<num2){
+        alert(+num1+" es menor que "+num2);
+        }
+        else{
+            alert(+num1+ " es mayor que "+num2);
+        }
+    }
+</script>
+
+</html>
