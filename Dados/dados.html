@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dice Game / Ejercicio3</title>
+
+	<style>
+		.container {
+			width: 70%;
+			margin: auto;
+			text-align: center;
+		}
+
+		.dice {
+			text-align: center;
+			display: inline-block;
+			margin: 10px;
+		}
+
+		body {
+			background-color: #338eca;
+			margin: 0;
+		}
+
+		h1 {
+			margin: 30px;
+			font-family: "Lobster", cursive;
+			text-shadow: 5px 0 #232931;
+			font-size: 4.5rem;
+			color: #e9984c;
+			text-align: center;
+		}
+
+		p {
+			font-size: 2rem;
+			color: #e9984c;
+			font-family: "Indie Flower", cursive;
+		}
+
+		a {
+			font-size: 2rem;
+			color: #e9984c;
+			font-family: "Indie Flower", cursive;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		.bottom {
+			padding-top: 30px;
+		}
+
+		.butn {
+			background: #e9984c;
+			font-family: "Indie Flower", cursive;
+			border-radius: 7px;
+			color: #ffff;
+			font-size: 30px;
+			padding: 16px 25px 16px 25px;
+			text-decoration: none;
+		}
+
+		.butn:hover {
+			background: #232931;
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="data">Let's Play</h1>
+
+		<div class="dice">
+			<p class="Player1">Jugador 1</p>
+			<p class="PP1">Ju1</p>
+			<img class="img1" src="dice6.png">
+		</div>
+
+		<div class="dice">
+			<p class="Player2">Jugador 2</p>
+			<p class="PP2">Ju2</p>
+			<img class="img2" src="dice6.png">
+		</div>
+	</div>
+
+	<div class="container bottom">
+		<button type="button" class="butn"
+			onClick="rollTheDice()">
+			Roll the Dice
+		</button>
+	</div>
+	<div class="container bottom">
+		<button type="button" class="butn"
+			onClick="editNames()">
+			Editar Nombres
+		</button>
+	</div>
+
+	<script>
+
+
+		// Player name
+		var player1 = "Player 1";
+		var player2 = "Player 2";
+		var PP1 = 0, PP2 = 0; 
+
+		// Function to change the player name
+		function editNames() {
+			player1 = prompt("Change Player1 name");
+			player2 = prompt("Change player2 name");
+
+			document.querySelector("p.Player1")
+							.innerHTML = player1;
+
+			
+							
+			document.querySelector("p.Player2")
+							.innerHTML = player2;
+
+			
+							
+		}
+
+		// Function to roll the dice
+		function rollTheDice() {
+			setTimeout(function () {
+				var randomNumber1 = Math.floor(Math.random() * 6) + 1;
+				var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+				
+
+				document.querySelector("p.PP1")
+							.innerHTML = PP1;
+
+				document.querySelector("p.PP2")
+							.innerHTML = PP2;
+
+				document.querySelector(".img1").setAttribute("src",
+					"dice" + randomNumber1 + ".png");
+
+				document.querySelector(".img2").setAttribute("src",
+					"dice" + randomNumber2 + ".png");
+
+				if (randomNumber1 === randomNumber2) {
+					document.querySelector("h1").innerHTML = "Draw!";
+				}
+
+				else if (randomNumber1 < randomNumber2) {
+					document.querySelector("h1").innerHTML
+						= (player2 + " WINS!");
+						PP2+=1;
+
+
+				document.querySelector("p.PP2")
+							.innerHTML = PP2;
+
+							if(PP2 >= 21){
+								document.querySelector("H1.data")
+							.innerHTML = "EL GANADOR ES "+player2;
+							}
+						
+				}
+
+				else {
+					document.querySelector("h1").innerHTML
+						= (player1 + " WINS!");
+						PP1+=1;
+
+						document.querySelector("p.PP1")
+							.innerHTML = PP1;
+
+							if(PP1 >= 21){
+								document.querySelector("H1.data")
+							.innerHTML = "EL GANADOR ES "+player1;
+							}
+
+				}
+			}, 2500);
+		}
+	</script>
+</body>
+
+</html>
