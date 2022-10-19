@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moneda</title>
+    <style>
+        .container {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .dice {
+            text-align: center;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        body {
+            background-color: bisque;
+            margin: 0;
+        }
+
+        h1 {
+            margin: 30px;
+            font-family: "Lobster", cursive;
+            text-shadow: 5px 0 #232931;
+            font-size: 4.5rem;
+            color: #5287b3;
+            text-align: center;
+        }
+
+        p {
+            font-size: 2rem;
+            color: #5287b3;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        .bottom {
+            padding-top: 30px;
+        }
+
+        .butn {
+            background: #5287b3;
+            font-family: Arial, Helvetica, sans-serif border-radius: 7px;
+            color: #ffff;
+            font-size: 30px;
+            padding: 16px 25px 16px 25px;
+            text-decoration: none;
+        }
+
+        .butn:hover {
+            background: #232931;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Vamos a jugar</h1>
+    </div>
+
+    <div class="container bottom">
+        <button type="button" class="butn" onclick="LanzaMoneda()" ;>
+            Lanza la moneda
+        </button>
+    </div>
+
+    <script>
+        function LanzaMoneda() {
+            var Moneda = Math.floor(Math.random() * 2);
+            if(Moneda==1){
+                alert("Salió aguila");
+            }
+            else{
+                alert("Salió sol");
+            }
+
+        }
+        
+    </script>
+
+</body>
+
+</html>
