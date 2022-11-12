@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Videojuegos>
+        <Juego>
+    <Nombre>Demon Souls</Nombre>
+    <Año>2015</Año>
+    <Desarrolladora>Fromsoftware</Desarrolladora>
+        </Juego>
+        <Juego>
+<Nombre>Fortnite</Nombre>
+<Año>2017</Año>
+<Desarrolladora>Epic Games</Desarrolladora>
+        </Juego>
+        <Juego>
+<Nombre>Call Of Duty Black Ops 4 </Nombre>
+<Año>2018</Año>
+<Desarrolladora>Treyarch</Desarrolladora>
+        </Juego>
+        <Juego>
+<Nombre>Stardew Vallew</Nombre>
+<Año>2016</Año>
+<Desarrolladora>ConcernedApe</Desarrolladora>
+        </Juego>
+        <Juego>
+<Nombre>Mario Kart 8 Deluxe</Nombre>
+<Año>2017</Año>
+<Desarrolladora>Nintendo</Desarrolladora>
+        </Juego>
+        <Juego>
+        <Nombre>Halo</Nombre>
+        <Año>2000</Año>
+        <Desarrolladora>Bungie Studios</Desarrolladora>
+        </Juego>
+        <Juego>
+        <Nombre>God Of War</Nombre>
+        <Año>2018</Año>
+        <Desarrolladora>Santa Monica Studios</Desarrolladora>
+        </Juego>
+</Videojuegos>
+
+
